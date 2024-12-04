@@ -16,7 +16,7 @@ export class MyCdkProjectStack extends cdk.Stack {
     });
 
     // Create Lambda function
-    const myLambda = new lambda.Function(this, 'rusticlambda8933139', {
+    const myLambda = new lambda.Function(this, 'rusticlambda8933139ALT', {
       runtime: lambda.Runtime.NODEJS_20_X,
       handler: 'index.handler',
       code: lambda.Code.fromInline(`

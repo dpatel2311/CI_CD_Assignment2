@@ -10,13 +10,13 @@ export class MyCdkProjectStack extends cdk.Stack {
     super(scope, id, props);
     
     // Create S3 bucket
-    const myBucket = new s3.Bucket(this, 'Bucket8933139', {
+    const myBucket = new s3.Bucket(this, 'rusticmonkey8933139', {
       versioned: true,
       removalPolicy: cdk.RemovalPolicy.DESTROY,  // Only for dev/test environments
     });
 
     // Create Lambda function
-    const myLambda = new lambda.Function(this, 'Lambda8933139', {
+    const myLambda = new lambda.Function(this, 'rusticlambda8933139', {
       runtime: lambda.Runtime.NODEJS_20_X,
       handler: 'index.handler',
       code: lambda.Code.fromInline(`
@@ -31,7 +31,7 @@ export class MyCdkProjectStack extends cdk.Stack {
     });
 
     // Dynamo DB creation
-    const myTable = new dynamodb.Table(this, '8933139', {
+    const myTable = new dynamodb.Table(this, 'rustic8933139', {
       partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
       tableName: '8933139',
       removalPolicy: cdk.RemovalPolicy.DESTROY,  // Only for dev/test environments

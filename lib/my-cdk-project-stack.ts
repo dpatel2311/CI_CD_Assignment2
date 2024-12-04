@@ -33,7 +33,7 @@ export class MyCdkProjectStack extends cdk.Stack {
     // Dynamo DB creation
     const myTable = new dynamodb.Table(this, 'rustic8933139', {
       partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
-      tableName: '8933139',
+      tableName: 'rustic8933139',
       removalPolicy: cdk.RemovalPolicy.DESTROY,  // Only for dev/test environments
     });
   }
